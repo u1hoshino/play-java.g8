@@ -1,19 +1,19 @@
-@(message: String, style: String = "Scala")
+@(message: String, style: String = "Scala", playhome: String ="http://www.playframework.org")
 
 @play.api.Play.maybeApplication.filterNot(_.mode != play.api.Mode.Dev).map { _ =>
-    
-<link rel="stylesheet" media="screen" href="/@@documentation/resources/style/main.css">
+
+<link rel="stylesheet" media="screen" href="/assets/stylesheats/main.css">
 
 <section id="top">
     <div class="wrapper">
-        <h1><a href="/@@documentation">@message</a></h1>
+        <h1><a href="@playhome/documentation/2.0/Home">Documentation</a></h1>
         <nav>
             <span class="versions">
                 <span>Browse APIs</span>
                 <select onchange="document.location=this.value">
                     <option selected disabled>Select language</option>
-                    <option value="/@@documentation/api/scala/index.html">Scala</option>
-                    <option value="/@@documentation/api/java/index.html">Java</option>
+                    <option value="http://www.playframework.org/documentation/api/2.0/scala/index.html#package">Scala</option>
+                    <option value="http://www.playframework.org/documentation/api/2.0/java/index.html">Java</option>
                 </select>
             </span>
         </nav>
@@ -132,11 +132,6 @@ db.pass=secret</code></pre>
             <h2>Need more help?</h2>
 
             <p>
-                When your application is run from the Play console, you can access the current documentation directly, at 
-                the <a href="/@@documentation">/@@documentation</a> URL or go to <a href="http://www.playframework.org">http://www.playframework.org</a>.
-            </p>
-
-            <p>
                 The <a href="http://groups.google.com/group/play-framework">Play Google Group</a> is where Play users come to seek help, announce projects, and discuss issues and new features. If you don’t have a Google account, you can still join the mailing list by sending an e-mail to 
                 <strong>play-framework+subscribe@@googlegroups.com</strong>.
             </p>
@@ -145,14 +140,13 @@ db.pass=secret</code></pre>
         <aside>
             <h3>Browse</h3>
             <ul>
-                <li><a href="/@@documentation">Local documentation</a></li>
-                <li><a href="/@@documentation/api/scala/index.html">Browse the Scala API</a></li>
+                <li><a href="@playhome/documentation/2.0/Home">Documentation and API Docs</a></li>
             </ul>
             <h3>Start here</h3>
             <ul>
-                <li><a href="/@@documentation/PlayConsole">Using the Play console</a></li>
-                <li><a href="/@@documentation/IDE">Setting up your preferred IDE</a></li>
-                <li><a href="/@@documentation/ScalaTodoList">Your first application</a></li>
+                <li><a href="@playhome/documentation/2.0/PlayConsole">Using the Play console</a></li>
+                <li><a href="@playhome/documentation/2.0/IDE">Setting up your preferred IDE</a></li>
+                <li><a href="@playhome/documentation/2.0/ScalaTodoList">Your first application</a></li>
             </ul>
         </aside>
 
@@ -221,7 +215,7 @@ GET     /               controllers.Application.index()</code></pre>
             <h2>Is this your first time?</h2>
 
             <p>
-                You can now continue with the <a href="/@@documentation/JavaTodoList">first tutorial</a>, which will guide you through the basics of creating a Play 2.0 application.
+                You can now continue with the <a href="/@playhome/documentation/2.0/JavaTodoList">first tutorial</a>, which will guide you through the basics of creating a Play 2.0 application.
             </p>
 
             <h2>Need to set up an IDE?</h2>
@@ -233,7 +227,7 @@ GET     /               controllers.Application.index()</code></pre>
 
             <p>
                 If you want to set-up your application in <strong>Eclipse</strong> or any other Java IDE, check the 
-                <a href="/@@documentation/IDE">Setting up your preferred IDE</a> page.
+                <a href="@playhome/documentation/2.0/IDE">Setting up your preferred IDE</a> page.
             </p>
 
             <h2>Need to connect to a database?</h2>
@@ -267,27 +261,22 @@ db.pass=secret</code></pre>
             <h2>Need more help?</h2>
 
             <p>
-                When your application is run from the Play console, you can access the current documentation directly, at 
-                the <a href="/@@documentation">/@@documentation</a> URL or go to <a href="http://www.playframework.org">http://www.playframework.org</a>.
-            </p>
-
-            <p>
                 The <a href="http://groups.google.com/group/play-framework">Play Google Group</a> is where Play users come to seek help, announce projects, and discuss issues and new features. If you don’t have a Google account, you can still join the mailing list by sending an e-mail to 
                 <strong>play-framework+subscribe@@googlegroups.com</strong>.
             </p>
 
-        </article>    
+        </article>
         <aside>
             <h3>Browse</h3>
             <ul>
-                <li><a href="/@@documentation">Local documentation</a></li>
-                <li><a href="/@@documentation/api/java/index.html">Browse the Java API</a></li>
+                <li><a href="/@playhome/documentation/2.0">documentation</a></li>
+                <li><a href="/@playhome/documentation/2.0/api/java/index.html">Browse the Java API</a></li>
             </ul>
             <h3>Start here</h3>
             <ul>
-                <li><a href="/@@documentation/PlayConsole">Using the Play console</a></li>
-                <li><a href="/@@documentation/IDE">Setting up your preferred IDE</a></li>
-                <li><a href="/@@documentation/JavaTodoList">Your first application</a></li>
+                <li><a href="/@playhome/documentation/2.0/PlayConsole">Using the Play console</a></li>
+                <li><a href="/@playhome/documentation/2.0/IDE">Setting up your preferred IDE</a></li>
+                <li><a href="/@playhome/documentation/2.0/JavaTodoList">Your first application</a></li>
             </ul>
         </aside>
 
@@ -295,9 +284,9 @@ db.pass=secret</code></pre>
 
 
 </div>
-    
+
 }.getOrElse {
-    
+
 <h1>@message</h1>
-    
+
 }
