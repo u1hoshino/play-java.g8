@@ -110,4 +110,4 @@ span.by{font-size:14px;font-weight:normal;}
 form dl{padding:10px 0;}
 dd.info{color:#888;font-size:12px;}
 dd.error{color:#c00;}
-aside a[href^="http"]:after,.doc a[href^="http"]:after{content:url(/@documentation/resources/style/external.png);vertical-align:middle;margin-left:5px;}
+aside a[href^="http"]:after,.doc a[href^="http"]:after{vertical-align:middle;margin-left:5px;}
